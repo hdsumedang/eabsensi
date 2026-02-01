@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Absen Guru</title>
+
+  <!-- Favicon PNG -->
+  <link rel="icon" type="image/png" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjYeErWiSnx5vOde0prXf_fjwJrisUCNIJVyl_ls5bHXL2maOw-nZS9Z60zmhEZOs-aA42nQhHwSLcyrTvtmo6KpR6ZYwgFk8I0L1m6_-AmMAsUKCR_yJM6t-_zPw1mrnFHan432X3e8cdK69V_tPL9NxUAnVV_lmZbGmhMU-5_atnQUpNf85s_MGxkmnEv/w146-h144/LOGO-KU.png">
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+    iframe {
+      width: 100%;
+      height: 100dvh;
+      border: none;
+    }
+  </style>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const base =
+        "https://script.google.com/macros/s/AKfycbxh2vLkUD_-E8TLJ_30ehAyca5Glo2rfxY4fnMlU5e3pHChLPUjypH-SnZOWRZCTO56Xw/exec";
+
+      const isAdmin =
+        location.search.includes("admin");
+
+      document.getElementById("app").src =
+        isAdmin ? base + "?page=admin" : base;
+    });
+  </script>
+</head>
+<body>
+
+<iframe
+  id="app"
+  allow="camera; microphone; geolocation; fullscreen">
+</iframe>
+
+</body>
+</html>
